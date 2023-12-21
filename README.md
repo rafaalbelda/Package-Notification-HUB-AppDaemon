@@ -140,4 +140,4 @@ $$\textbf{\color{#0099ff} \huge Enjoy Yourself \unicode{x1f973} Caio Sweet}$$
 [link-homeassistant]:https://www.home-assistant.io/getting-started
 [Wiki]: https://github.com/caiosweet/Package-Notification-HUB-AppDaemon/wiki
 [blueprint_import_shield]: https://my.home-assistant.io/badges/blueprint_import.svg
-[blueprint_notifier_startup_configuration]: https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Frafaalbelda%2FPackage-Notification-HUB-AppDaemon%2Fblob%2Fmain%2Fblueprints%2Fautomation%2Fcaiosweet%2Fnotifier_startup_configuration.yaml
+[blueprint_notifier_startup_configuration]: https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Frafaalbelda%2FPackage-Notification-HUB-AppDaemon%2Fblob%2Fspanish%2Fblueprints%2Fautomation%2Fcaiosweet%2Fnotifier_startup_configuration.yaml
