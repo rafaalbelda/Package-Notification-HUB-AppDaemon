@@ -470,7 +470,7 @@ action:
               - service: persistent_notification.create
                 data:
                   notification_id: "centro_notifiche_config_download"
-                  title: "Configurazione Centro Notifiche"
+                  title: "Configuración del Centro de Notificaciones"
                   message: |
                     ## Restart Notifier App and Download Package
 
@@ -648,9 +648,9 @@ action:
               - alias: "Welcome message"
                 service: script.my_notify
                 data:
-                  title: "📬 Benvnuto nel Centro Notifiche! 🕵"
+                  title: "📬 ¡Bienvenido al Centro de Notificaciones! 🕵"
                   message: |
-                    Centro Notifiche configurato ed operativo!
+                    ¡Centro de notificaciones configurado y operativo!
                   alexa:
                     voice: Giorgio
                     type: tts
@@ -684,7 +684,7 @@ action:
               - service: persistent_notification.create
                 data:
                   notification_id: "centro_notifiche_config_purge"
-                  title: "Purge Centro Notifiche"
+                  title: "Purgar Centro de Notificaciones"
                   message: |-
                     PURGE DATABASE
           #----------------------------------------------------------------------------#
@@ -719,7 +719,7 @@ action:
               - service: persistent_notification.create
                 data:
                   notification_id: "centro_notifiche_config"
-                  title: "Configurazione Centro Notifiche"
+                  title: "Configuración del Centro de Notificaciones"
                   message: |-
                     {% set message = data %}
                     ```json
@@ -754,7 +754,7 @@ action:
                             data:
                               notify: False
                               call_no_annuncio: True
-                              message: "Set Auto Volumes silent. {{ period }} at {{ volume | int(0) }}%"
+                              message: "Establecer volúmenes automáticos en silencio. {{ period }} a {{ volume | int(0) }}%"
                               no_show: "{{ True if trigger.platform is none else False }}"
                               alexa:
                                 priority: True
@@ -818,7 +818,7 @@ action:
         sequence:
           - service: script.my_notify
             data:
-              title: "Modalità Ospite - {{ trigger.to_state.state | upper }}"
+              title: "Modo invitado - {{ trigger.to_state.state | upper }}"
               call_no_annuncio: true
               call_modo_ospite: true
               alexa: true

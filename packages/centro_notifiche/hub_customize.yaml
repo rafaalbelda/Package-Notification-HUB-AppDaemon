@@ -14,39 +14,39 @@ homeassistant:
     ## BINARY SENSOR
     binary_sensor.notifier_dnd:
       <<: *extra_attributes
-      friendly_name: "Modo Silenzioso"
+      friendly_name: "Modo Silencioso"
     binary_sensor.notifier_people_home:
       <<: *extra_attributes
-      friendly_name: "Persone in casa"
+      friendly_name: "Alguien en casa"
     button.notifier_last_message:
       <<: *extra_attributes
-      friendly_name: "Ultimo Messaggio"
+      friendly_name: "Ultimo mensaje"
       icon: mdi:repeat-once
     ## GROUP
     group.notifier_automations:
       <<: *extra_attributes
-      friendly_name: "Automazioni Notifier"
+      friendly_name: "Automatizaciones de Notificadores"
       icon: mdi:home-automation
     group.notifier_location_tracker:
       <<: *extra_attributes
-      friendly_name: "Dispositivi tracciati"
+      friendly_name: "Dispositivos rastreados"
       icon: mdi:target-account
     group.notifier_group_volumes:
       <<: *extra_attributes
-      friendly_name: "Volumi"
+      friendly_name: "Volúmenes"
       icon: mdi:knob
     group.notifier_group_notification:
       <<: *extra_attributes
-      friendly_name: "Gruppo Notifiche"
+      friendly_name: "Grupo de Notificaciones"
       icon: mdi:power
     ## INPUT BOOLEAN
     input_boolean.notifier_guest_mode:
       <<: *extra_attributes
-      friendly_name: "Modo Ospite"
+      friendly_name: "Modo invitado"
       icon: mdi:account-multiple-plus
     input_boolean.notifier_holidays:
       <<: *extra_attributes
-      friendly_name: "Modo Vacanza"
+      friendly_name: "Modo vacaciones"
       icon: mdi:beach
     input_boolean.notifier_html_mode:
       <<: *extra_attributes
@@ -54,7 +54,7 @@ homeassistant:
       icon: mdi:language-html5 #language-markdown
     input_boolean.notifier_phone_notifications:
       <<: *extra_attributes
-      friendly_name: "Notifiche VoIP"
+      friendly_name: "Notificaciones VoIP"
       icon: mdi:phone-in-talk
     input_boolean.notifier_priority_message:
       <<: *extra_attributes
@@ -62,112 +62,112 @@ homeassistant:
       icon: mdi:alarm-light
     input_boolean.notifier_screen_notifications:
       <<: *extra_attributes
-      friendly_name: "Notifiche Persistenti"
+      friendly_name: "Notificaciones Persistentes"
       icon: mdi:dock-left #message-bulleted
     input_boolean.notifier_speech_notifications:
       <<: *extra_attributes
-      friendly_name: "Notifiche Vocali"
+      friendly_name: "Notificaciones de Voz"
       icon: mdi:account-tie-voice
     input_boolean.notifier_text_notifications:
       <<: *extra_attributes
-      friendly_name: "Notifiche Testo"
+      friendly_name: "Notificaciones de Texto"
       icon: mdi:cellphone-message
     input_boolean.notifier_tts_clock:
       <<: *extra_attributes
-      friendly_name: "Orario in TTS App"
+      friendly_name: "Horario en TTS App"
       icon: mdi:message-text-clock
     input_boolean.notifier_wrap_text:
       <<: *extra_attributes
-      friendly_name: "Testo a capo"
+      friendly_name: "Ajustar texto"
       icon: mdi:wrap
     ## INPUT BUTTON
     input_button.notifier_reset_config:
       <<: *extra_attributes
-      friendly_name: "Reset Configurazione"
+      friendly_name: "Restablecer Configuración"
       icon: mdi:gesture-tap-button
     ## INPUT DATETIME
     input_datetime.notifier_start_early_morning:
       <<: *extra_attributes
-      friendly_name: "Inizio Mattina Presto"
+      friendly_name: "Inicio Temprano por la Mañana"
       icon: mdi:timer-play-outline
     input_datetime.notifier_start_morning:
       <<: *extra_attributes
-      friendly_name: "Inizio Mattina"
+      friendly_name: "Inicio Mañana"
       icon: mdi:timer-play-outline
     input_datetime.notifier_start_afternoon:
       <<: *extra_attributes
-      friendly_name: "Inizio Pomeriggio"
+      friendly_name: "Inicio Mediodía"
       icon: mdi:timer-play-outline
     input_datetime.notifier_start_evening:
       <<: *extra_attributes
-      friendly_name: "Inizio Sera"
+      friendly_name: "Inicio Tarde"
       icon: mdi:timer-play-outline
     input_datetime.notifier_start_night:
       <<: *extra_attributes
-      friendly_name: "Inizio Notte"
+      friendly_name: "Inicio Noche"
       icon: mdi:timer-play-outline
     input_datetime.notifier_start_late_night:
       <<: *extra_attributes
-      friendly_name: "Inizio Notte Fonda"
+      friendly_name: "Inicio Noche Profunda"
       icon: mdi:timer-play-outline
     input_datetime.notifier_start_weekdays:
       <<: *extra_attributes
-      friendly_name: "Inizio DND Feriali"
+      friendly_name: "Inicio DND Laborables"
     input_datetime.notifier_end_weekdays:
       <<: *extra_attributes
-      friendly_name: "Fine DND Feriali"
+      friendly_name: "Fin DND Laborables"
     input_datetime.notifier_start_holidays:
       <<: *extra_attributes
-      friendly_name: "Inizio DND Festivi"
+      friendly_name: "Inicio DND Festivos"
     input_datetime.notifier_end_holidays:
       <<: *extra_attributes
-      friendly_name: "Fine DND Festivi"
+      friendly_name: "Fine DND Festivos"
     ## INPUT NUMBER
     input_number.notifier_early_morning_volume:
       <<: *extra_attributes
-      friendly_name: "Vol Mattina Presto"
+      friendly_name: "Vol Temprano en la Mañana"
       icon: mdi:volume-medium
     input_number.notifier_morning_volume:
       <<: *extra_attributes
-      friendly_name: "Vol Mattina"
+      friendly_name: "Vol Mañana"
       icon: mdi:volume-medium
     input_number.notifier_afternoon_volume:
       <<: *extra_attributes
-      friendly_name: "Vol Pomeriggio"
+      friendly_name: "Vol Mediodía"
       icon: mdi:volume-high
     input_number.notifier_evening_volume:
       <<: *extra_attributes
-      friendly_name: "Vol Sera"
+      friendly_name: "Vol Tarde"
       icon: mdi:volume-medium
     input_number.notifier_night_volume:
       <<: *extra_attributes
-      friendly_name: "Vol Notte"
+      friendly_name: "Vol Noche"
       icon: mdi:volume-low
     input_number.notifier_late_night_volume:
       <<: *extra_attributes
-      friendly_name: "Vol Notte Fonda"
+      friendly_name: "Vol Noche Profunda"
       icon: mdi:volume-low
     input_number.notifier_intercom_volume:
       <<: *extra_attributes
-      friendly_name: "Volume Interfono"
+      friendly_name: "Volumen Interfono"
       icon: mdi:volume-source
     input_number.notifier_tts_wait_time:
       <<: *extra_attributes
-      friendly_name: "TTS tempo di attesa"
+      friendly_name: "TTS tiempo de espera"
       icon: mdi:av-timer
       unit_of_measurement: "sec"
     ## INPUT SELECT
     input_select.notifier_language:
       <<: *extra_attributes
-      friendly_name: "Lingua"
+      friendly_name: "Idioma"
       icon: mdi:flag-variant
     input_select.notifier_phone_notify:
       <<: *extra_attributes
-      friendly_name: "Notifica Telefonica"
+      friendly_name: "Notificación Telefonica"
       icon: mdi:phone-forward
     select.notifier_text_notify:
       <<: *extra_attributes
-      friendly_name: "Notifica Testo"
+      friendly_name: "Notificación de Texto"
       icon: mdi:message-text-fast
     ## INPUT TEXT
     input_text.notifier_called_number:
@@ -176,11 +176,11 @@ homeassistant:
       icon: mdi:phone-classic
     input_text.notifier_last_message:
       <<: *extra_attributes
-      friendly_name: "Salva Ultimo Messaggio"
+      friendly_name: "Guarda Ultimo Mensaje"
       icon: mdi:repeat
     input_text.notifier_intercom_message:
       <<: *extra_attributes
-      friendly_name: "Messaggio Interfono"
+      friendly_name: "Mensaje Interfono"
       icon: mdi:bullhorn-outline
     ## SCRIPT
     script.my_notify:
@@ -194,13 +194,13 @@ homeassistant:
       icon: mdi:account-wrench
     sensor.notifier_day_period:
       <<: *extra_attributes
-      friendly_name: "Periodo del Giorno"
+      friendly_name: "Período del Día"
     sensor.notifier_day_period_volume:
       <<: *extra_attributes
-      friendly_name: "Volume Notifica"
+      friendly_name: "Volumen Notificaciones"
     sensor.notifier_text_notify:
       <<: *extra_attributes
-      friendly_name: "Notify Predefinito"
+      friendly_name: "Notificador Predeterminado"
       icon: mdi:send-check
 
   ##############################################################################
@@ -209,17 +209,17 @@ homeassistant:
     ## BINARY SENSOR
     binary_sensor.notifier_alexa_speak:
       <<: *extra_attributes
-      friendly_name: "Alexa parla"
+      friendly_name: "Alexa habla"
       icon: mdi:speaker-message
     ## BUTTON
     button.notifier_alexa_ssml_reset:
       <<: *extra_attributes
-      friendly_name: "Ripristina SSML"
+      friendly_name: "Restaurar SSML"
       icon: mdi:gesture-tap-button
     ## GROUP
     group.notifier_player_alexa:
       <<: *extra_attributes
-      friendly_name: "Gruppo Alexa"
+      friendly_name: "Grupo Alexa"
       icon: mdi:speaker-multiple
     ## INPUT
     input_boolean.notifier_alexa_switch:
@@ -229,7 +229,7 @@ homeassistant:
       # icon: si:amazonalexa
     input_boolean.notifier_alexa_smart_volume:
       <<: *extra_attributes
-      friendly_name: "Imposta volume smart"
+      friendly_name: "Establecer volumen inteligente"
       icon: mdi:volume-equal
     input_boolean.notifier_alexa_ssml:
       <<: *extra_attributes
@@ -245,7 +245,7 @@ homeassistant:
       icon: mdi:alpha-p
     input_number.notifier_alexa_prosody_volume:
       <<: *extra_attributes
-      friendly_name: "Volume"
+      friendly_name: "Volumen"
       icon: mdi:alpha-v
       unit_of_measurement: "dB"
     input_select.notifier_alexa_voice:
@@ -258,16 +258,16 @@ homeassistant:
       icon: mdi:flag-variant
     input_select.notifier_alexa_method:
       <<: *extra_attributes
-      friendly_name: "Metodo Predefinito Alexa"
+      friendly_name: "Método Predeterminado de Alexa"
       icon: mdi:monitor-speaker
     input_select.notifier_alexa_type:
       <<: *extra_attributes
-      friendly_name: "Tipo Predefinito Alexa"
+      friendly_name: "Tipo Predeterminado de Alexa"
       icon: mdi:bugle
     ## SELECT
     select.notifier_player_alexa:
       <<: *extra_attributes
-      friendly_name: "Sorgente Alexa"
+      friendly_name: "Fuente Alexa"
       icon: mdi:speaker-wireless
     ## SENSOR
     sensor.last_alexa:
@@ -276,7 +276,7 @@ homeassistant:
       icon: mdi:play-network
     sensor.notifier_player_alexa:
       <<: *extra_attributes
-      friendly_name: "Player Alexa Predefinito"
+      friendly_name: "Reproductor Alexa Predeterminado"
 
   ##############################################################################
   ##  GOOGLE

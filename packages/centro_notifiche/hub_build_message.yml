@@ -1,7 +1,7 @@
 >-
-  {# ** NON RIMUOVERE IL SIMBOLO " > " QUI SOPRA * #}
+  {# ** DO NOT REMOVE THE SYMBOL " > " ABOVE ***** #}
   {# ********************************************* #}
-  {#             MACRO E IMPOSTAZIONI              #}
+  {#             MACROS AND SETTINGS               #}
   {# ********************************************* #}
 
   {% set nome = states('sensor.notifier_config') | default('Centro Notifiche') %}
@@ -11,11 +11,11 @@
 
   {%- macro annuncio() -%}
     {% if now().hour < 12 and now().hour > 6 %}
-      {% set annuncio = ["Buondì. ", "Buongiorno. "] %}
+      {% set annuncio = ["Buen día. ", "Buenos días. "] %}
     {% elif now().hour >= 12 and now().hour < 17 %}
-      {% set annuncio = ["Buon pomeriggio. "] %}
+      {% set annuncio = ["Buenas tardes. ", "Buenas. "] %}
     {% else %}
-      {% set annuncio = ["Buonasera. "] %}
+      {% set annuncio = ["Buenas noches. "] %}
     {% endif %}
     {{ annuncio|random }}
   {%- endmacro -%}
@@ -23,19 +23,19 @@
   {%- macro modo_ospite() -%}
     {% if is_state ('input_boolean.notifier_guest_mode', 'on') %}
       {% set modo_ospite = [
-        "Sembra che abbiamo un ospite in casa. ",
-        "Abbiamo un ospite. Attiverò la modalità ospite. ",
-        "Ho attivato la modalità ospite per la visita della nostra casa. ",
-        "Passo alla modalità ospite. ",
-        "Non capita spesso di avere ospiti, lascia che prepari la casa per la tua visita. "
+        "Parece que tenemos un invitado en la casa.. ",
+        "Tenemos un invitado. Voy a activar el modo invitado.. ",
+        "Activé el modo invitado para la visita de nuestra casa.. ",
+        "Paso al modo invitado. ",
+        "No es frecuente que tengamos invitados, déjame preparar la casa para tu visita.. "
       ] %}
     {% else %}
       {% set modo_ospite = [
-        "Sembra che il nostro ospite se ne sia andato, disabiliterò la modalità ospite. ",
-        "Consentimi di disabilitare la modalità ospite poiché non ci sono più ospiti. ",
-        "Ho disabilitato la modalità ospite e ho ripreso le normali operazioni. ",
-        "Disabilito la modalità ospite. ",
-        "Dal momento che non ci sono più ospiti mi permetto di disabilitare la modalità ospite. "
+        "Parece que nuestro invitado se ha ido, desactivaré el modo invitado.. ",
+        "Déjame desactivar el modo invitado ya que no hay más invitados.. ",
+        "Desactivé el modo invitado y reanudé las operaciones normales.. ",
+        "Desactivo el modo invitado. ",
+        "Como no hay más invitados me permito desactivar el modo invitado. "
       ] %}
     {% endif %}
     {{ modo_ospite|random }}
@@ -43,13 +43,13 @@
 
 
   {# *************************************************************************** #}
-  {#        INIZIO SEQUENZIALE DELLA COSTRUZIONE DEL MESSAGGIO / NOTIZIA         #}
+  {#        SEQUENTIAL START OF THE CONSTRUCTION OF THE MESSAGE / NEWS           #}
   {# *************************************************************************** #}
   {% if not call_no_annuncio|default %} {{ annuncio() }} {% endif %}
   {% if call_modo_ospite|default %} {{ modo_ospite() }} {% endif %}
 
-  {# Esempio di come aggiungere altre variabili - Chiamata da Automazione di Benvenuto #}
+  {# Example of how to add more variables - Call from Welcome Automation #}
   {{ benvenuto|default }}
 
-  {# + Contenuto del messaggio passato tramite automazioni/script + #}
+  {# + Message content passed through automations/scripts + #}
   {{ message|default }}
