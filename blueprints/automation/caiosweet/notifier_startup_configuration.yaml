@@ -1,14 +1,15 @@
-blueprint:
-  name: Centro Notifiche - Configurazione Avvio
+ blueprint:
+  name: Centro Notifiche - Configuración de inicio
   description: >
-    `v5.1.2`
+    `v5.1.2.es`
 
-    Blueprint per la configurazione del [Package Centro Notifiche](https://api.github.com/repos/caiosweet/Package-Notification-HUB-AppDaemon/releases/latest)
-    per Appdaemon [Notifier Center](https://github.com/jumping2000/notifier) 🔔 - 
+    Blueprint para configurar el [Package Centro Notifiche](https://api.github.com/repos/caiosweet/Package-Notification-HUB-AppDaemon/releases/latest)
+    para Appdaemon [Notifier Center](https://github.com/jumping2000/notifier) 🔔 - 
     Authors [Caio](https://github.com/caiosweet), [Gianpi](https://github.com/jumping2000) by [Site hassiohelp](https://hassiohelp.eu/)
     Date Started 01/11/2019 - Updated 01/07/2023
+    Spanish Translation [rafaalbelda](https://github.com/rafaalbelda) - 21/12/2023
 
-    Guida di riferimento per l'utilizzo del Progetto Centro Notifiche, ed altre informazioni le trovi sul [wiki](https://github.com/caiosweet/Package-Notification-HUB-AppDaemon/wiki)
+    La guía de referencia para utilizar el Proyecto del Centro de notificaciones y otra información se pueden encontrar en [wiki](https://github.com/caiosweet/Package-Notification-HUB-AppDaemon/wiki)
 
   domain: automation
   author: https://github.com/caiosweet
@@ -18,7 +19,7 @@ blueprint:
     packages_folder:
       name: Package folder
       description: |-
-        Inserisci il percorso della cartella [packages](https://www.home-assistant.io/docs/configuration/packages/#create-a-packages-folder) nella directory di configurazione di Home Assistant.
+        Ingrese la ruta de la carpeta [packages](https://www.home-assistant.io/docs/configuration/packages/#create-a-packages-folder) en el directorio de configuración de Home Assistant.
 
         _Path packages folder in your Home Assistant configuration directory_
         default /config/packages
@@ -29,9 +30,9 @@ blueprint:
     personal_assistant:
       name: Personal Assistant
       description: |-
-        Imposta il nome del tuo assistente personale.
-        Verrà utilizzato nei titoli dei messaggi testuali, in plancia, e nelle notifiche di home assistant.
-        Esempio **[Jarvis - 20:43:12] Garage**
+        Establece el nombre de tu asistente personal.
+        Se utilizará en los títulos de los mensajes de texto, en el tablero y en las notificaciones del asistente del hogar..
+        Ejemplo **[Jarvis - 20:43:12] Garage**
 
         _Choose a name for your personal assistant_
         default empty
@@ -42,8 +43,8 @@ blueprint:
     person:
       name: Person
       description: |-
-        Aggiungi una o più [persone](https://www.home-assistant.io/integrations/person/) per la gestione delle presenze in casa.
-        Verranno creati un gruppo e un sensore in base alla lista. Il sensore, in oltre, avrà gli attributi number e name, corrispondenti al numero di persone in casa e i rispettivi nomi.
+        Añade uno o más [personas](https://www.home-assistant.io/integrations/person/) para gestionar la asistencia en casa.
+        Se creará un grupo y un sensor según la lista. Además, el sensor tendrá los atributos de número y nombre, correspondientes al número de personas en la casa y sus respectivos nombres..
 
         _List of People_
         default empty
@@ -59,10 +60,10 @@ blueprint:
     alexa_media_player:
       name: Alexa Media Player
       description: |-
-        Aggiungi uno o più media player se utilizzi [Alexa Media](https://github.com/custom-components/alexa_media_player).
-        Verrà creato un gruppo dalla lista risultante. 
-        Inoltre, sarà autocompilato il selettore dei media player Alexa, per la scelta di un dispositivo predefinito, 
-        da usare con il Centro Notifiche.
+        Agregue uno o más reproductores multimedia si usa [Alexa Media](https://github.com/custom-components/alexa_media_player).
+        Se creará un grupo a partir de la lista resultante.. 
+        Además, el selector del reproductor multimedia de Alexa se completará automáticamente para elegir un dispositivo predeterminado., 
+        para usar con el Centro Notifiche.
 
         _Alexa Media Player list_
         default empty
@@ -77,8 +78,8 @@ blueprint:
     alexa_group_player:
       name: Alexa Group Player
       description: |-
-        Scegli uno o più gruppi di media player per Alexa.
-        Verranno aggiunti nel selettore per la scelta del dispositivo predefinito, insieme ai precedenti media player Alexa.
+        Elija uno o más grupos de reproductores multimedia para Alexa.
+        Se agregarán al selector de dispositivos predeterminado, junto con los reproductores multimedia anteriores de Alexa.
 
         _Alexa Group Player list_
         default empty
@@ -95,7 +96,7 @@ blueprint:
     google_media_player:
       name: Google Media Player
       description: |-
-        Aggiungi uno o più media player se utilizzi [Google Cast](https://www.home-assistant.io/integrations/cast/)
+        Agregue uno o más reproductores multimedia si usa [Google Cast](https://www.home-assistant.io/integrations/cast/)
 
         _List of Google Media Player_
         default empty
@@ -112,8 +113,8 @@ blueprint:
     google_group_player:
       name: Google Group Player
       description: |-
-        Scegli uno o più gruppi di media player per Google.
-        Verranno aggiunti nel selettore per la scelta del dispositivo predefinito, insieme ai precedenti media player Google.
+        Elija uno o más grupos de reproductores multimedia para Google.
+        Se agregarán al selector de dispositivos predeterminado, junto con los reproductores multimedia anteriores de Google.
 
         _List of google Group Player_
         default empty
@@ -129,13 +130,13 @@ blueprint:
     notify_service_list:
       name: Notify list
       description: |-
-        Aggiungi i servizi notify, per ricevere le notifiche testuali.
-        Se desideri inviare notifiche multiple a dispositivi diversi, 
-        e non hai creato un [gruppo di notify](https://www.home-assistant.io/integrations/group/#notify-groups), basta aggiungere più servizi separati da una virgola. 
+        Agregue servicios de notificación para recibir notificaciones de texto.
+        Si desea enviar múltiples notificaciones a diferentes dispositivos, 
+        y no has creado un [grupo de notificaciones](https://www.home-assistant.io/integrations/group/#notify-groups), simplemente agregue múltiples servicios separados por una coma. 
         `(es. - notify.notify, notify.mobile_app_pixel_7)`
-        `(può andare bene anche senza notify: - Mobile App Pixel 7, telegram)`
+        `(puede funcionar bien incluso sin notificar: - Mobile App Pixel 7, telegram)`
 
-        Esempio completo, di come compilare la lista a mano, con servizi multipli e singoli.
+        Ejemplo completo de cómo elaborar la lista a mano, con múltiples y únicos servicios.
         ```
         - notify.telegram
         - notify.mobile_app_pixel_7
@@ -160,13 +161,13 @@ blueprint:
     enabled_home_assistant_event:
       name: Notification Home Assistant Event
       description: |-
-        Abilitazione per la ricezione dei seguenti eventi di home assistant:
-        Avvio, Scrittura finale, Chiusura, Stop e Riavvio manuale.
-        Come opzione, puoi aggiungere nel tuo sistema, il sensore per conoscere i tempi di avvio di home assistant, che trovi nel file [utility](https://github.com/caiosweet/Package-Notification-HUB-AppDaemon/tree/main/extra)
+        Permitiendo recibir los siguientes eventos de home assistant:
+        Inicio, escritura final, apagado, parada y reinicio manual.
+        Como opción, puedes añadir el sensor para conocer los tiempos de inicio del asistente del hogar, que encuentras en la ficha, en tu sistema [utility](https://github.com/rafaalbelda/Package-Notification-HUB-AppDaemon/tree/main/extra)
         ```
         [Jerry - 17:31:15] HomeAssistant Start!
-        Buonasera.
-        📬 Jerry è operativo!. 🕵️
+        Buenas noches.
+        📬 ¡Jerry está en funcionamiento!. 🕵️
         🟩 Home Assistant initialized in 50.21s
         ```
 
@@ -180,8 +181,8 @@ blueprint:
     ha_event_notify:
       name: Notify service Notification Home Assistant Event
       description: |-
-        Puoi scegliere uno o più servizi di "notify" diversi, per le notifiche di Home Assistant, invece di quello predefinito.
-        Per esempio, se vuoi ricevere le notifche di Home Assistant Start/Final Write/Close/Stop/Restart solo sul dispositivo mobile
+        Puede elegir uno o más servicios de "notificación" diferentes para las notificaciones de Home Assistant, en lugar del predeterminado.
+        Por ejemplo, si desea recibir notificaciones de Inicio/Escritura final/Cerrar/Detener/Reiniciar de Home Assistant solo en su dispositivo móvil
         `- notify.mobile_app_pixel_7 `
 
         _You can choose one or more different "notify" services for Home Assistant notifications instead of the default one._
@@ -193,8 +194,8 @@ blueprint:
     enabled_auto_volume:
       name: Auto volume
       description: |-
-        I volumi vengono aggiornati in base al sensore del periodo del giorno, da impostare dalla interfaccia grafica (Dashborad o cards).
-        Le entità da impostare sono gli orari e i volumi a partire dal primo mattino fino a notte fonda.
+        Los volúmenes se actualizan en función del sensor del periodo del día, a configurar desde la interfaz gráfica (Dashborad o cards).
+        Las entidades a fijar son los horarios y volúmenes desde primera hora de la mañana hasta altas horas de la noche.
 
         _Media player volume adjustment, based on Period of day volume sensor_
         default: on
@@ -205,8 +206,8 @@ blueprint:
     time_pattern_hours:
       name: Pattern hours
       description: |-
-        Aggiornamento dei volumi che si ripete in base al numero di ore selezionate.
-        Es. 4, l'aggiornamento verrà ripetuto ogni 4 ore.
+        Actualización de volumen que se repite según la cantidad de horas seleccionadas.
+        Ej. 4, la actualización se repetirá cada 4 horas.
 
         _Updates every x hours._
         default: 0
@@ -222,7 +223,7 @@ blueprint:
     exclude_media_player:
       name: Exclude Media Player
       description: |-
-        Selezionare gli eventuali media player (vale per entrambi Alexa-Google), da escludere dall'auto-volume.
+        Seleccione cualquier reproductor multimedia (esto se aplica tanto a Alexa como a Google) para excluirlo del volumen automático.
 
         _Exclude Media Player from auto volume sequence_
         default: empty
@@ -237,8 +238,8 @@ blueprint:
     tts_google:
       name: Service TTS Google
       description: |-
-        Inserire il servizio per il [TTS Google Translate](https://www.home-assistant.io/integrations/google_translate/).
-        Ad esempio se il servizio è tts.google_say basta scrivere solo google_say
+        Ingrese al servicio para el [TTS Google Translate](https://www.home-assistant.io/integrations/google_translate/).
+        Por ejemplo, si el servicio es tts.google_say, simplemente escribe google_say
 
         _Service [Text-to-Speech (TTS)](https://www.home-assistant.io/integrations/tts/#service-say-legacy): 
         Say a TTS message with Google Translate_
@@ -250,7 +251,7 @@ blueprint:
     tts_google_cloud:
       name: Service TTS Google Cloud
       description: |-
-        Inserire il servizio per il TTS Google Cloud.
+        Ingrese al servicio de Google Cloud TTS.
 
         _Service TTS Google Cloud_
         default: google_cloud
@@ -261,7 +262,7 @@ blueprint:
     reverso_tts:
       name: Service Reverso TTS
       description: |-
-        Inserire il servizio per il componente personalizzato di [Reverso TTS](https://github.com/rt400/ReversoTTS-HA).
+        Ingrese el servicio para el componente personalizado de [Reverso TTS](https://github.com/rt400/ReversoTTS-HA).
 
         _Service Reverso TTS_
         default: reversotts_say
@@ -272,7 +273,7 @@ blueprint:
     sip_server_name:
       name: Service Sip server name
       description: |-
-        Inserire il servizio utilizzato nell'[Addon](https://github.com/sdesalve/hassio-addons/tree/master/dss_voip) del nostro Admin SDesalve
+        Ingrese el servicio utilizado en el [Addon](https://github.com/sdesalve/hassio-addons/tree/master/dss_voip) del nostro Admin SDesalve
 
         _Service Sip server name_
         default: fritz.box:5060
@@ -283,7 +284,7 @@ blueprint:
     alexa_skill_id:
       name: Notifier Alexa actionable skill ID
       description: |-
-        Inserire l'ID Alexa Skills per [Alexa Actionable notifications](https://github.com/keatontaylor/alexa-actions)
+        Ingrese su ID de habilidades de Alexa para [Alexa Actionable notifications](https://github.com/keatontaylor/alexa-actions)
 
         _Notifier Alexa actionable skill ID_
         default: empty
@@ -294,8 +295,8 @@ blueprint:
     download:
       name: Download
       description: |-
-        Permette di scaricare i file, della versione più recente del package, al riavvio dell'app Notifier.
-        I file saranno salvati nella cartella centro_notifiche nella directory dei packages. 
+        Le permite descargar los archivos de la versión más reciente del paquete cuando reinicia la aplicación Notifier.
+        Los archivos se guardarán en la carpeta Notification_center en el directorio de paquetes.
 
         _Download the new stable version of the package from Github._
         default: off
@@ -306,7 +307,7 @@ blueprint:
     beta_version:
       name: Beta Version
       description: |-
-        Scarica la versiona beta invece della stabile.
+        Descargue la versión beta en lugar de la versión estable.
 
         _Download the beta version instead of the stable one._
         default: off
@@ -317,7 +318,7 @@ blueprint:
     debug:
       name: Debug and extra info
       description: |-
-        Modalità di debug.
+        Modo de depuración.
 
         _Show entra information for trigger e configuration_
         default: off
@@ -855,7 +856,7 @@ action:
                   | regex_replace(find=" *, *", replace=",") | lower).rsplit(","), DEFAULT_NOTIFY) }}
               start_message: >-
                 {{ iif(states('sensor.notifier_config') != "", 
-                  states('sensor.notifier_config'), 'Il sistema ') }} è operativo!.
+                  states('sensor.notifier_config'), 'El sistema ') }} esta operativo!.
           - alias: "Repeat text notify"
             repeat:
               for_each: "{{ notify_service }}"
