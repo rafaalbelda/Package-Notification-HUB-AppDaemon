@@ -1,7 +1,7 @@
 
 # Package Notification HUB AppDaemon
 
-This fork is to translate to panish the original
+This fork is to translate to spanish the original
 
 > **Warning**
 > This is a package for Home Assistant, which works together with the [Notifier][notifier] App in [AppDaemon][appdaemon].
